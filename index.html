@@ -7,33 +7,89 @@
 </head>
 
 <body>
-    <header>
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho-site">
     <h1>AgroFeira</h1>
-    <nav>
+
+    <nav aria-label="Principal" class="menu">
         <ul>
-        <li><a href="#apresentacao">Apresentação</a></li>
-        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="index.html" aria-current="page">Início</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html">Cadastro do produtor</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </nav>
     </header>    
 
-<main>
+<main id="conteudo">
+
+    <p>
+        <a href="#apresentacao">Conheça a AgroFeira</a> |
+        <a href="#produtos">Ver produtos</a>
+    </p>
+
     <section>
-    <h2 id="apresentacao">Apresentação</h2>
-    <p>A AgroFeira, a maior e melhor produtora agrícola de Paragominas e Região.</p>
+        <h2 id="apresentacao">Conheça a AgroFeira</h2>
+
+        <p>
+            A AgroFeira reúne produtores locais e oferece
+            <strong>produtos frescos</strong> diretamente para a comunidade.
+        </p>
+
+        <figure class="figura-destaque">
+            <picture>
+                <source media="(min-width: 800px)" srcset="feira-1280.jpg">
+
+                <img
+                    src="feira-330.jpg"
+                    alt="Vista de uma feira com barracas e pessoas"
+                    width="330"
+                    height="247"
+                >
+            </picture>
+
+            <figcaption>
+                Feira de produtores locais.
+                Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+            </figcaption>
+        </figure>
     </section>
     
+    <form class="busca">
+        <label for="campo">Procurar produto</label>
+
+        <input type="search" id="campo" name="campo">
+
+        <button type="submit">
+            <img src="lupa.png" alt="Procurar">
+        </button>
+    </form>
+
     <section>
-    <h2 id="produtos">Produtos</h2>
-    <ul>
-    <li>Abóbora — kg</li>
-    <li>Melancia — unidade</li>
-    <li>Banana — kg</li>
-    </ul>
+        <h2 id="produtos">Produtos</h2>
+
+        <ul class="lista-produtos">
+            <li class="cartao-produto">Mandioca — saca de 60 kg</li>
+            <li class="cartao-produto">Banana-prata — cacho</li>
+            <li class="cartao-produto">Açaí — rasa</li>
+            <li class="cartao-produto">Pimenta-do-reino — quilo</li>
+            <li class="cartao-produto">Cupuaçu — quilo</li>
+            <li class="cartao-produto">Alface — maço</li>
+        </ul>
+
+        <p class="aviso">
+            <strong>Importante:</strong> os preços dos produtos podem mudar semanalmente.
+        </p>
     </section>
 </main>
 
-<footer>
+<aside aria-label="Informações relacionadas">
+    <p>Endereço: Rua Exemplo, 100, Paragominas - PA.</p>
+    <p>Horário: sábado, das 7h às 12h.</p>
+</aside>
+
+<footer class="rodape-site">
     <p>AgroFeira — produtos da nossa região.</p>
 </footer>
 
