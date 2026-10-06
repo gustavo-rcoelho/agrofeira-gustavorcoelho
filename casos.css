@@ -13,6 +13,11 @@ A regra .aviso strong deve vencer porque possui maior especificidade
 Além disso, as duas regras têm a mesma propriedade color.
 */
 
+/* Conferido:
+.aviso strong venceu com especificidade 0,1,1.
+strong perdeu com especificidade 0,0,1.
+*/
+
 /* Caso 2 */
 .busca label {
     color: var(--cor-marca);
@@ -28,6 +33,12 @@ enquanto .busca label também possui especificidade (0,1,1).
 Nesse empate, vence a regra que aparece por último no CSS.
 */
 
+/* Conferido:
+label[for] venceu com especificidade 0,1,1.
+.busca label perdeu com especificidade 0,1,1.
+A regra label[for] venceu por aparecer depois no CSS.
+*/
+
 /* Caso 3 */
 .rodape-site {
     color: var(--cor-marca);
@@ -39,4 +50,9 @@ footer p {
 /* Previsão:
 A regra .rodape-site deve vencer porque possui especificidade (0,1,0),
 enquanto footer p possui especificidade (0,0,2).
+*/
+
+/* Conferido:
+footer p venceu com especificidade 0,0,2.
+.rodape-site perdeu com especificidade 0,1,0.
 */
