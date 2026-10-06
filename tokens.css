@@ -1,11 +1,20 @@
 :root {
     
     /* Cores */
-    --cor-fundo: #FDFBF7;
+    --cor-fundo: #e2b65e;
     --cor-superficie: #FFFFFF;
+    
+    /* 14,2:1 — texto sobre fundo — AA */
+    /* 14,67:1 — texto sobre superfície — AA */
     --cor-texto: #1F2937;
+
+    /* 7,21:1 — texto suave sobre fundo — AA */
     --cor-texto-suave: #555555;
+
+    /* 9,58:1 — marca sobre fundo — AA */
     --cor-marca: #2D4A27;
+
+    /* 9,9:1 — texto sobre marca — AA */
     --cor-sobre-marca: #FFFFFF;
     --cor-borda: #E5E7EB;
 
