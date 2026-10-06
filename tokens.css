@@ -1,12 +1,13 @@
 :root {
     /* Cores */
-    --cor-fundo: #f5f1e8;
-    --cor-superficie: #ffffff;
-    --cor-texto: #222222;
+    /* Cores */
+    --cor-fundo: #FDFBF7;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #1F2937;
     --cor-texto-suave: #555555;
-    --cor-marca: #176b3a;
-    --cor-sobre-marca: #ffffff;
-    --cor-borda: #cccccc;
+    --cor-marca: #2D4A27;
+    --cor-sobre-marca: #FFFFFF;
+    --cor-borda: #E5E7EB;
 
     /* Fontes */
     --fonte-texto: Lato, sans-serif;
