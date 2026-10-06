@@ -1,0 +1,30 @@
+:root {
+    /* Cores */
+    --cor-fundo: #f5f1e8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #222222;
+    --cor-texto-suave: #555555;
+    --cor-marca: #176b3a;
+    --cor-sobre-marca: #ffffff;
+    --cor-borda: #cccccc;
+
+    /* Fontes */
+    --fonte-texto: Lato, sans-serif;
+    --fonte-titulo: Lato, sans-serif;
+
+    /* Escala modular: multiplicador 1.2 */
+    --tamanho-texto: 1rem;
+    --tamanho-h3: 1.2rem;
+    --tamanho-h2: 1.44rem;
+    --tamanho-h1: 1.728rem;
+
+    /* Espaçamentos */
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+
+    /* Outros */
+    --raio: 8px;
+    --sombra: 0 2px 6px rgb(0 0 0 / 0.15);
+}
