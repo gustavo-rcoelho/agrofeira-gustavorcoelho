@@ -1,22 +1,22 @@
 :root {
     
     /* Cores */
-    --cor-fundo: #FDFBF7;;
+    --cor-fundo: #F5F0E8;
     --cor-superficie: #FFFFFF;
     
-    /* 14,2:1 — texto sobre fundo — AA */
-    /* 14,67:1 — texto sobre superfície — AA */
-    --cor-texto: #1F2937;
+    /* 13,1:1 — texto sobre fundo — AAA */
+    /* 14,0:1:1 — texto sobre superfície — AAA */
+    --cor-texto: #2B2B2B;
 
-    /* 7,21:1 — texto suave sobre fundo — AA */
-    --cor-texto-suave: #555555;
+    /* 6,3:1 — texto suave sobre fundo — AA */
+    --cor-texto-suave: #5A5A5A;
 
-    /* 9,58:1 — marca sobre fundo — AA */
-    --cor-marca: #2D4A27;
+    /* 7,8:1 — marca sobre fundo — AAA */
+    --cor-marca: #7B2D26;
 
-    /* 9,9:1 — texto sobre marca — AA */
+    /* 9,5:1 — texto sobre marca — AAA */
     --cor-sobre-marca: #FFFFFF;
-    --cor-borda: #E5E7EB;
+    --cor-borda: #D6CFC4;
 
     /* Fontes */
     --fonte-texto: Lato, sans-serif;
