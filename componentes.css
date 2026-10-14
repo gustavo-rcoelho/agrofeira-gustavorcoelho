@@ -75,6 +75,13 @@
         cursor: pointer;
     }
 
+    @media (prefers-color-scheme: dark) {
+        .pagina-catalogo .cartao-produto button {
+            background-color: #E7A39B;
+            color: #292524;
+        }
+    }
+
     .busca button:hover,
     form button:hover,
     .pagina-catalogo .barra-categorias button:hover {
