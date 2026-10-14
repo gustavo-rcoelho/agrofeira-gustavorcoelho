@@ -176,7 +176,7 @@ dl dt {
 }
 
 
-/* Catálogo — grade de produtos */
+
 .pagina-catalogo .lista-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -195,4 +195,38 @@ dl dt {
 
 .pagina-catalogo aside .lista-produtos {
     grid-template-columns: 1fr;
+}
+
+
+.pagina-catalogo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecalho"
+        "menu"
+        "conteudo"
+        "lateral"
+        "rodape";
+}
+
+.pagina-catalogo > .cabecalho-site {
+    grid-area: cabecalho;
+}
+
+.pagina-catalogo > .menu {
+    grid-area: menu;
+}
+
+.pagina-catalogo > main {
+    grid-area: conteudo;
+    min-width: 0;
+}
+
+.pagina-catalogo > aside {
+    grid-area: lateral;
+    min-width: 0;
+}
+
+.pagina-catalogo > .rodape-site {
+    grid-area: rodape;
 }
