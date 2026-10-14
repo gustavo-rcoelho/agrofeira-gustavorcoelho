@@ -176,7 +176,6 @@ dl dt {
 }
 
 
-
 .pagina-catalogo .lista-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -209,11 +208,24 @@ dl dt {
         "rodape";
 }
 
+
+/* Catálogo — estrutura da página */
+.pagina-catalogo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecalho"
+        "menu"
+        "conteudo"
+        "lateral"
+        "rodape";
+}
+
 .pagina-catalogo > .cabecalho-site {
     grid-area: cabecalho;
 }
 
-.pagina-catalogo > .menu {
+.pagina-catalogo > nav[aria-label="Principal"] {
     grid-area: menu;
 }
 
@@ -222,11 +234,141 @@ dl dt {
     min-width: 0;
 }
 
-.pagina-catalogo > aside {
+.pagina-catalogo > aside.lateral {
     grid-area: lateral;
     min-width: 0;
 }
 
 .pagina-catalogo > .rodape-site {
     grid-area: rodape;
+}
+
+.pagina-catalogo .barra-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-1);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--espaco-3);
+}
+
+.pagina-catalogo .barra-categorias button {
+    background-color: var(--cor-marca);
+    color: var(--cor-sobre-marca);
+    border: 0;
+    border-radius: var(--raio);
+    padding: 0.5em 1em;
+    font: inherit;
+    cursor: pointer;
+}
+
+
+/* Catálogo — imagens dos produtos */
+.pagina-catalogo .cartao-produto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--raio);
+}
+
+/* Catálogo — conteúdo dos cartões */
+.pagina-catalogo .cartao-produto article {
+    display: grid;
+    gap: var(--espaco-1);
+}
+
+.pagina-catalogo .cartao-produto h3 {
+    margin-top: var(--espaco-1);
+}
+
+.pagina-catalogo .cartao-produto .produtor {
+    color: var(--cor-texto-suave);
+}
+
+.pagina-catalogo .cartao-produto .preco {
+    font-weight: bold;
+}
+
+.pagina-catalogo .cartao-produto {
+    container-type: inline-size;
+}
+
+@container (min-width: 30rem) {
+    .pagina-catalogo .cartao-produto article {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start;
+        column-gap: var(--espaco-3);
+    }
+
+    .pagina-catalogo .cartao-produto article img {
+        grid-column: 1;
+        grid-row: 1 / span 4;
+    }
+
+    .pagina-catalogo .cartao-produto article h3,
+    .pagina-catalogo .cartao-produto article .produtor,
+    .pagina-catalogo .cartao-produto article .preco,
+    .pagina-catalogo .cartao-produto article button {
+        grid-column: 2;
+    }
+}
+
+
+
+@media (min-width: 70rem) {
+    .pagina-catalogo {
+        grid-template-columns: 12rem minmax(0, 1fr) 16rem;
+        grid-template-areas:
+            "cabecalho cabecalho cabecalho"
+            "menu conteudo lateral"
+            "rodape rodape rodape";
+    }
+
+    .pagina-catalogo > .cabecalho-site,
+    .pagina-catalogo > .rodape-site {
+        grid-column: 1 / -1;
+    }
+
+    .pagina-catalogo > nav[aria-label="Principal"] {
+        align-self: start;
+    }
+
+    .pagina-catalogo > nav[aria-label="Principal"] .menu {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-2);
+    }
+}
+
+
+.busca button:hover,
+form button:hover,
+.pagina-catalogo .barra-categorias button:hover {
+    background-color: var(--cor-marca-forte);
+}
+
+
+:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+.pagina-catalogo .cartao-produto:has(button:focus-visible) {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+.pular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: var(--espaco-2);
+    background-color: var(--cor-marca);
+    color: var(--cor-sobre-marca);
+    transform: translateY(-150%);
+}
+
+.pular:focus {
+    transform: translateY(0);
 }
