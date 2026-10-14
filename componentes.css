@@ -247,4 +247,25 @@
         outline: 3px solid var(--cor-foco);
         outline-offset: 3px;
     }
+
+        /* Casos de especificidade — atividade */
+    .aviso strong {
+        color: var(--cor-marca);
+    }
+
+    .busca label {
+        color: var(--cor-marca);
+    }
+
+    label[for] {
+        color: var(--cor-texto-suave);
+    }
+
+    .rodape-site {
+        color: var(--cor-marca);
+    }
+
+    footer p {
+        color: var(--cor-texto);
+    }
 }
