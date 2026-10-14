@@ -65,6 +65,16 @@
         padding: 0.5em 1em;
     }
 
+    .pagina-catalogo .cartao-produto button {
+        background-color: var(--cor-marca);
+        color: var(--cor-sobre-marca);
+        border: 0;
+        border-radius: var(--raio);
+        padding: 0.5em 1em;
+        font: inherit;
+        cursor: pointer;
+    }
+
     .busca button:hover,
     form button:hover,
     .pagina-catalogo .barra-categorias button:hover {
