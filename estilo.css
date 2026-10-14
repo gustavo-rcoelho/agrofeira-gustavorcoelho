@@ -196,6 +196,21 @@ dl dt {
     grid-template-columns: 1fr;
 }
 
+.pagina-catalogo aside .cartao-produto article {
+    grid-template-columns: 1fr;
+}
+
+.pagina-catalogo aside .cartao-produto article img {
+    grid-column: 1;
+    grid-row: auto;
+}
+
+.pagina-catalogo aside .cartao-produto article h3,
+.pagina-catalogo aside .cartao-produto article .produtor,
+.pagina-catalogo aside .cartao-produto article .preco,
+.pagina-catalogo aside .cartao-produto article button {
+    grid-column: 1;
+}
 
 .pagina-catalogo {
     display: grid;
