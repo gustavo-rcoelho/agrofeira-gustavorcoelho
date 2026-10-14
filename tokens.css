@@ -3,7 +3,7 @@
     /* Cores */
     --cor-fundo: #F5F0E8;
     --cor-superficie: #FFFFFF;
-    --cor-foco: #D97706;
+    --cor-foco: #A67800;
     --cor-marca-forte: #54201B;
     
     /* 13,1:1 — texto sobre fundo — AAA */
@@ -39,4 +39,21 @@
     /* Outros */
     --raio: 8px;
     --sombra: 0 2px 6px rgb(0 0 0 / 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+        --cor-fundo: #1C1917;
+        --cor-superficie: #292524;
+        --cor-texto: #F5F5F4;
+        --cor-texto-suave: #D6D3D1;
+        --cor-marca: #E7A39B;
+        --cor-sobre-marca: #292524;
+        --cor-borda: #57534E;
+
+        --cor-foco: #FBBF24;
+        --cor-marca-forte: #F5C2BB;
+    }
 }
