@@ -1,3 +1,4 @@
+@layer base {
 :root {
     
     /* Cores */
@@ -56,4 +57,5 @@
         --cor-foco: #FBBF24;
         --cor-marca-forte: #F5C2BB;
     }
+}
 }

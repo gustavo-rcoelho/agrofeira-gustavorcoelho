@@ -1,0 +1,250 @@
+
+@layer componentes {
+    /* Cabeçalho e menu */
+    .cabecalho-site {
+        background-color: var(--cor-marca);
+        color: var(--cor-sobre-marca);
+        padding: var(--espaco-3);
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: var(--espaco-2) 0 0;
+    }
+
+    .menu a {
+        color: var(--cor-sobre-marca);
+    }
+
+    .menu [aria-current="page"] {
+        font-weight: bold;
+    }
+
+    .rodape-site {
+        border-top: 2px solid var(--cor-marca);
+        color: var(--cor-texto-suave);
+        padding: var(--espaco-3);
+    }
+
+    /* Produtos */
+    .lista-produtos {
+        list-style: none;
+        padding: 0;
+    }
+
+    .cartao-produto {
+        background-color: var(--cor-superficie);
+        border: 1px solid var(--cor-borda);
+        border-radius: var(--raio);
+        box-shadow: var(--sombra);
+        padding: var(--espaco-2);
+        margin-bottom: var(--espaco-2);
+        max-width: 40rem;
+    }
+
+    .figura-destaque figcaption {
+        color: var(--cor-texto-suave);
+        margin-top: var(--espaco-1);
+    }
+
+    /* Busca e botões */
+    .busca input {
+        border: 1px solid var(--cor-borda);
+        border-radius: var(--raio);
+        padding: 0.5em;
+        background-color: var(--cor-superficie);
+    }
+
+    .busca button,
+    form button {
+        background-color: var(--cor-marca);
+        color: var(--cor-sobre-marca);
+        border: 0;
+        border-radius: var(--raio);
+        padding: 0.5em 1em;
+    }
+
+    .busca button:hover,
+    form button:hover,
+    .pagina-catalogo .barra-categorias button:hover {
+        background-color: var(--cor-marca-forte);
+    }
+
+    /* Avisos e tabelas */
+    .aviso {
+        background-color: var(--cor-superficie);
+        border: 2px solid var(--cor-marca);
+        border-radius: var(--raio);
+        padding: var(--espaco-2);
+        max-width: 65ch;
+    }
+
+    .tabela-safra {
+        border-collapse: collapse;
+    }
+
+    .tabela-safra th,
+    .tabela-safra td {
+        padding: var(--espaco-2);
+    }
+
+    .tabela-safra thead th {
+        background-color: var(--cor-marca);
+        color: var(--cor-sobre-marca);
+    }
+
+    .tabela-safra tbody td {
+        background-color: var(--cor-superficie);
+    }
+
+    /* Formulário de cadastro */
+    .formulario-cadastro fieldset {
+        border: 1px solid var(--cor-borda);
+        border-radius: var(--raio);
+        padding: var(--espaco-2);
+        margin-bottom: var(--espaco-3);
+    }
+
+    .formulario-cadastro legend {
+        font-weight: bold;
+        color: var(--cor-marca);
+    }
+
+    .formulario-cadastro input[type="text"],
+    .formulario-cadastro input[type="email"],
+    .formulario-cadastro input[type="tel"],
+    .formulario-cadastro input[type="number"],
+    .formulario-cadastro input[type="date"],
+    .formulario-cadastro select,
+    .formulario-cadastro textarea {
+        border: 1px solid var(--cor-borda);
+        border-radius: var(--raio);
+        padding: 0.5em;
+        background-color: var(--cor-superficie);
+    }
+
+    .formulario-cadastro input[type="radio"],
+    .formulario-cadastro input[type="checkbox"] {
+        margin-right: var(--espaco-1);
+    }
+
+    .pergunta {
+        border: 1px solid var(--cor-borda);
+        border-radius: var(--raio);
+        padding: var(--espaco-2);
+        margin-bottom: var(--espaco-1);
+        max-width: 65ch;
+    }
+
+    /* Catálogo — grade de produtos */
+    .pagina-catalogo .lista-produtos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: var(--espaco-2);
+    }
+
+    .pagina-catalogo .lista-produtos .destaque {
+        grid-column: 1 / -1;
+    }
+
+    .pagina-catalogo .cartao-produto {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 0;
+        container-type: inline-size;
+    }
+
+    .pagina-catalogo aside .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-catalogo aside .cartao-produto article {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-catalogo aside .cartao-produto article img {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .pagina-catalogo aside .cartao-produto article h3,
+    .pagina-catalogo aside .cartao-produto article .produtor,
+    .pagina-catalogo aside .cartao-produto article .preco,
+    .pagina-catalogo aside .cartao-produto article button {
+        grid-column: 1;
+    }
+
+    /* Catálogo — barra de categorias */
+    .pagina-catalogo .barra-categorias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espaco-1);
+        list-style: none;
+        padding: 0;
+        margin: 0 0 var(--espaco-3);
+    }
+
+    .pagina-catalogo .barra-categorias button {
+        background-color: var(--cor-marca);
+        color: var(--cor-sobre-marca);
+        border: 0;
+        border-radius: var(--raio);
+        padding: 0.5em 1em;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    /* Catálogo — imagens dos produtos */
+    .pagina-catalogo .cartao-produto img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--raio);
+    }
+
+    /* Catálogo — conteúdo dos cartões */
+    .pagina-catalogo .cartao-produto article {
+        display: grid;
+        gap: var(--espaco-1);
+    }
+
+    .pagina-catalogo .cartao-produto h3 {
+        margin-top: var(--espaco-1);
+    }
+
+    .pagina-catalogo .cartao-produto .produtor {
+        color: var(--cor-texto-suave);
+    }
+
+    .pagina-catalogo .cartao-produto .preco {
+        font-weight: bold;
+    }
+
+    /* Container query — adapta o conteúdo à largura do cartão */
+    @container (min-width: 30rem) {
+        .pagina-catalogo .cartao-produto article {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            align-items: start;
+            column-gap: var(--espaco-3);
+        }
+
+        .pagina-catalogo .cartao-produto article img {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+        }
+
+        .pagina-catalogo .cartao-produto article h3,
+        .pagina-catalogo .cartao-produto article .produtor,
+        .pagina-catalogo .cartao-produto article .preco,
+        .pagina-catalogo .cartao-produto article button {
+            grid-column: 2;
+        }
+    }
+
+    /* :has() — destaca o cartão com botão em foco pelo teclado */
+    .pagina-catalogo .cartao-produto:has(button:focus-visible) {
+        outline: 3px solid var(--cor-foco);
+        outline-offset: 3px;
+    }
+}
