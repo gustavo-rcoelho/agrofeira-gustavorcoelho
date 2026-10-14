@@ -174,3 +174,25 @@ dl dt {
     margin-bottom: var(--espaco-1);
     max-width: 65ch;
 }
+
+
+/* Catálogo — grade de produtos */
+.pagina-catalogo .lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--espaco-2);
+}
+
+.pagina-catalogo .lista-produtos .destaque {
+    grid-column: 1 / -1;
+}
+
+.pagina-catalogo .cartao-produto {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+}
+
+.pagina-catalogo aside .lista-produtos {
+    grid-template-columns: 1fr;
+}
