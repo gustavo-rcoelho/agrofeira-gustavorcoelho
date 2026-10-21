@@ -16,6 +16,8 @@
 
     /* 7,8:1 — marca sobre fundo — AAA */
     --cor-marca: #7B2D26;
+    --cor-marca-rgb: 123, 45, 38; /* Cópia RGB de --cor-marca */
+    --cor-marca-forte-rgb: 84, 32, 27; /* Cópia RGB de --cor-marca-forte */
 
     /* 9,5:1 — texto sobre marca — AAA */
     --cor-sobre-marca: #FFFFFF;
@@ -56,6 +58,8 @@
 
         --cor-foco: #FBBF24;
         --cor-marca-forte: #F5C2BB;
+        --cor-marca-rgb: 231, 163, 155; /* Cópia RGB de --cor-marca */
+        --cor-marca-forte-rgb: 245, 194, 187; /* Cópia RGB de --cor-marca-forte */
     }
 }
 }
