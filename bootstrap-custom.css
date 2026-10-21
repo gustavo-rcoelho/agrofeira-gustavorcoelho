@@ -1,0 +1,41 @@
+
+body {
+    background-color: #FDFBF7;
+    color: #1F2937;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    color: #2D4A27;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card .fw-bold {
+    color: #2D4A27;
+}
+
+.btn-success {
+    background-color: #2D4A27;
+    border-color: #2D4A27;
+}
+
+.btn-success:hover {
+    background-color: #20371C;
+    border-color: #20371C;
+}
+
+footer {
+    color: #1F2937;
+}
