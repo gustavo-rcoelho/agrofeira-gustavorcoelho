@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AgroFeira — Relatório Comparativo</title>
+
+    <link rel="stylesheet" href="camadas.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="utilitarios.css">
+</head>
+<body>
+    <header>
+        <h1>Relatório Comparativo — CSS Autoral e Bootstrap</h1>
+        <p>Projeto AgroFeira — Atividade 05</p>
+    </header>
+
+    <main id="conteudo">
+        <section>
+            <h2>1. Introdução</h2>
+            <p>
+                Este relatório apresenta uma comparação entre o catálogo
+                desenvolvido com CSS autoral e sua versão construída com
+                Bootstrap 5.3.8. A análise considera o volume de dados
+                transferidos, o desempenho de carregamento, a quantidade
+                de linhas de CSS e o uso de classes nos componentes.
+            </p>
+        </section>
+        <section>
+            <h2>2. Comparação do volume de dados transferidos</h2>
+
+            <p>
+                As medições foram realizadas no Chrome DevTools,
+                na aba Network, com a opção Disable cache ativada.
+                Foram analisadas as versões públicas dos dois catálogos.
+            </p>
+
+            <table>
+                <caption>
+                    Tabela 1 — Dados transferidos pelos catálogos
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Recurso</th>
+                        <th scope="col">CSS autoral</th>
+                        <th scope="col">Bootstrap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Total (All)</th>
+                        <td>423 kB</td>
+                        <td>430 kB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTML (Doc)</th>
+                        <td>1,8 kB</td>
+                        <td>2,1 kB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CSS</th>
+                        <td>5,5 kB</td>
+                        <td>35,0 kB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fontes (Font)</th>
+                        <td>28,2 kB</td>
+                        <td>0,0 kB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Imagens (Img)</th>
+                        <td>388 kB</td>
+                        <td>387 kB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>3. Comparação do desempenho (LCP)</h2>
+
+            <p>
+                O Largest Contentful Paint (LCP) mede o tempo necessário
+                para renderizar o maior elemento visível da página.
+                Foram realizadas cinco medições em cada catálogo,
+                utilizando o Chrome DevTools, com o cache desativado
+                e sem limitação de CPU ou rede.
+            </p>
+
+            <table>
+                <caption>
+                    Tabela 2 — Resultados das medições de LCP
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Medição</th>
+                        <th scope="col">CSS autoral</th>
+                        <th scope="col">Bootstrap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1ª medição</th>
+                        <td>773,3 ms</td>
+                        <td>302,6 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2ª medição</th>
+                        <td>307,5 ms</td>
+                        <td>385,8 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3ª medição</th>
+                        <td>274,7 ms</td>
+                        <td>288,8 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4ª medição</th>
+                        <td>317,3 ms</td>
+                        <td>509,9 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5ª medição</th>
+                        <td>287,2 ms</td>
+                        <td>291,5 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mediana</th>
+                        <td>307,5 ms</td>
+                        <td>302,6 ms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Amplitude</th>
+                        <td>498,6 ms</td>
+                        <td>221,1 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                O catálogo Bootstrap apresentou mediana de LCP
+                4,9 ms menor que a versão autoral. Entretanto,
+                essa diferença é pequena diante da variação
+                observada nas medições, não sendo suficiente
+                para concluir que o Bootstrap oferece melhor desempenho.
+            </p>
+        </section>
+        <section>
+            <h2>4. Comparação das linhas de CSS e classes utilizadas</h2>
+
+            <p>
+                A comparação considera a quantidade de linhas dos arquivos
+                CSS do projeto, incluindo comentários e linhas em branco,
+                e a quantidade de classes utilizadas no card do Açaí médio.
+            </p>
+
+            <table>
+                <caption>
+                    Tabela 3 — Comparação da estrutura CSS
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Indicador</th>
+                        <th scope="col">CSS autoral</th>
+                        <th scope="col">Bootstrap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Linhas de CSS do projeto</th>
+                        <td>530</td>
+                        <td>84</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Classes no card do Açaí</th>
+                        <td>3</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Elementos com atributo class</th>
+                        <td>3</td>
+                        <td>9</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                O catálogo Bootstrap utiliza 446 linhas a menos de CSS
+                desenvolvido no próprio projeto, uma redução de
+                aproximadamente 84,2%. Entretanto, essa contagem
+                não inclui o código da biblioteca Bootstrap,
+                carregada externamente.
+            </p>
+
+            <p>
+                No card do Açaí médio, o CSS autoral utiliza três
+                classes distribuídas em três elementos. Já o Bootstrap
+                utiliza 15 classes distribuídas em nove elementos,
+                incluindo o selo "Safra nova". Sem considerar o selo,
+                são 13 classes em oito elementos.
+            </p>
+
+            <p>
+                A versão autoral concentra a personalização nos
+                arquivos CSS, enquanto o Bootstrap utiliza classes
+                utilitárias e componentes diretamente no HTML.
+                Além disso, o CSS autoral contém regras compartilhadas
+                com outras páginas do AgroFeira, enquanto o arquivo
+                agrofeira-bootstrap.css contém apenas a personalização
+                necessária para integrar o Bootstrap à identidade visual.
+            </p>
+        </section>
+        <section>
+            <h2>5. Análise das diferenças entre as implementações</h2>
+
+            <h3>5.1. Desenvolvimento e personalização</h3>
+
+            <p>
+                Na versão com CSS autoral, a aparência e o comportamento
+                dos componentes foram definidos por regras próprias,
+                distribuídas entre os arquivos do projeto. Essa abordagem
+                oferece maior controle sobre os estilos, mas exige
+                implementar e manter manualmente as soluções de layout,
+                responsividade e apresentação visual.
+            </p>
+
+            <p>
+                Na versão Bootstrap, a estrutura responsiva foi construída
+                com classes prontas, como container, row, col, card e
+                btn-primary. Isso reduziu a necessidade de escrever CSS
+                específico, embora tenha aumentado a quantidade de classes
+                presentes no HTML. A personalização das cores e da
+                tipografia foi concentrada no arquivo
+                agrofeira-bootstrap.css, utilizando variáveis CSS
+                relacionadas aos tokens visuais do AgroFeira.
+            </p>
+
+            <h3>5.2. Funcionalidades e diferenças de escopo</h3>
+
+            <p>
+                O catálogo original apresenta recursos adicionais,
+                como link para pular diretamente ao conteúdo principal,
+                menu de navegação, organização por categorias e regras
+                responsivas específicas. Também utiliza recursos modernos
+                de CSS, como consultas de contêiner e o seletor :has(),
+                que permitem adaptar componentes e aplicar estilos
+                conforme sua estrutura e seu estado.
+            </p>
+
+            <p>
+                A versão Bootstrap foi desenvolvida com foco na
+                apresentação dos produtos, utilizando um grid responsivo,
+                cards, botões, aviso de entregas e uma lista lateral
+                de produtos mais pedidos. Portanto, as duas páginas
+                não apresentam exatamente as mesmas funcionalidades.
+                Essa diferença deve ser considerada na interpretação
+                dos resultados de desempenho e na comparação do
+                esforço de desenvolvimento.
+            </p>
+        </section>
+        <section>
+            <h2>6. Limitações das medições</h2>
+
+            <p>
+                As medições de transferência de dados mostram a quantidade
+                de informações recebidas pelo navegador, mas não permitem
+                determinar isoladamente qual implementação oferece melhor
+                desempenho. Isso ocorre porque os catálogos possuem diferenças
+                de conteúdo, estrutura e carregamento de fontes. O catálogo
+                original transferiu 423 kB, enquanto o Bootstrap transferiu
+                430 kB. Embora a diferença total seja pequena, o CSS do
+                Bootstrap apresentou um volume transferido consideravelmente
+                maior.
+            </p>
+
+            <p>
+                Outra limitação está relacionada às medições de LCP, que
+                representam o tempo de renderização do maior elemento visível
+                da página, e não exclusivamente o desempenho do CSS.
+                Fatores como velocidade da conexão, processamento do navegador,
+                carregamento das imagens e condições do computador podem
+                influenciar os resultados. Além disso, cinco medições
+                representam uma amostra limitada.
+            </p>
+
+            <p>
+                A mediana do catálogo original foi de 307,5 ms, enquanto
+                a versão Bootstrap apresentou 302,6 ms. A diferença de
+                apenas 4,9 ms é pequena diante das amplitudes registradas:
+                498,6 ms no original e 221,1 ms no Bootstrap. Portanto,
+                os resultados não demonstram uma vantagem consistente
+                de desempenho para nenhuma das implementações.
+            </p>
+
+            <p>
+                Por fim, a comparação de linhas de CSS não representa
+                todo o código necessário para cada abordagem. A contagem
+                de 84 linhas do projeto Bootstrap não inclui a biblioteca
+                externa, enquanto as 530 linhas do CSS autoral incluem
+                regras utilizadas também em outras páginas do AgroFeira.
+                Assim, essa métrica representa principalmente a quantidade
+                de código CSS mantido diretamente no projeto.
+            </p>
+        </section>
+        <section>
+            <h2>7. Conclusão</h2>
+
+            <p>
+                A comparação demonstrou que o Bootstrap reduziu de
+                530 para 84 linhas a quantidade de CSS mantido
+                diretamente no projeto, mas aumentou a transferência
+                de CSS de 5,5 kB para 35,0 kB e o uso de classes
+                no card do Açaí médio de 3 para 15. Apesar disso,
+                as duas implementações apresentaram resultados
+                semelhantes de LCP, com medianas de 307,5 ms
+                no catálogo autoral e 302,6 ms no Bootstrap,
+                indicando que a escolha entre as abordagens deve
+                considerar principalmente as necessidades de
+                personalização, manutenção e desenvolvimento.
+            </p>
+        </section>
+        <section>
+            <h2>8. Evidências e capturas de tela</h2>
+
+            <p>
+                As imagens a seguir apresentam as evidências visuais
+                da implementação, da responsividade e das medições
+                realizadas nos dois catálogos.
+            </p>
+
+            <h3>8.1. Responsividade e personalização</h3>
+
+            <figure>
+                <img src="capturas/captura-1-360.png"
+                    alt="Catálogo Bootstrap na largura de 360 pixels, com produtos organizados em uma coluna."
+                    width="776" height="646">
+                <figcaption>
+                    Figura 1 — Catálogo Bootstrap em tela de 360 px.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="capturas/captura-2-1200-antes.png"
+                    alt="Catálogo Bootstrap em tela de 1200 pixels antes da personalização das cores."
+                    width="795" height="626">
+                <figcaption>
+                    Figura 2 — Catálogo Bootstrap antes da personalização.
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="capturas/captura-3-regra-botao.png"
+                    alt="DevTools mostrando a regra CSS do botão primário do Bootstrap e a variável --bs-btn-bg."
+                    width="1315" height="672">
+                <figcaption>
+                    Figura 3 — Regra CSS responsável pela cor do botão primário.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="capturas/captura-4-1200-depois.png"
+                    alt="Catálogo Bootstrap em tela de 1200 pixels após a personalização, com botões na cor vinho."
+                    width="1299" height="679">
+                <figcaption>
+                    Figura 4 — Catálogo Bootstrap após a personalização.
+                </figcaption>
+            </figure>
+            <h3>8.2. Medições de transferência de dados</h3>
+
+            <figure>
+                <img src="capturas/captura-5-rede-autoral.png"
+                    alt="Painel Network do Chrome DevTools mostrando as requisições e o total de 423 kB transferidos pelo catálogo original."
+                    width="632" height="552">
+                <figcaption>
+                    Figura 5 — Medição de rede do catálogo com CSS autoral.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="capturas/captura-6-rede-bootstrap.png"
+                    alt="Painel Network do Chrome DevTools mostrando as requisições e o total de 430 kB transferidos pelo catálogo Bootstrap."
+                    width="663" height="593">
+                <figcaption>
+                    Figura 6 — Medição de rede do catálogo Bootstrap.
+                </figcaption>
+            </figure>
+            <h3>8.3. Medições de desempenho (LCP)</h3>
+
+            <figure>
+                <img src="capturas/captura-7-lcp-autoral.png"
+                    alt="Painel Performance do Chrome DevTools mostrando a medição de LCP do catálogo original."
+                    width="1314" height="687">
+                <figcaption>
+                    Figura 7 — Medição de LCP do catálogo com CSS autoral.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="capturas/captura-8-lcp-bootstrap.png"
+                    alt="Painel Performance do Chrome DevTools mostrando a medição de LCP do catálogo Bootstrap."
+                    width="1312" height="675">
+                <figcaption>
+                    Figura 8 — Medição de LCP do catálogo Bootstrap.
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>AgroFeira — Paragominas, PA.</p>
+    </footer>
+</body>
+</html>
