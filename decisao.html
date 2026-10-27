@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06 — Registro de Decisão — Gustavo Rodrigues Coelho</title>
+
+    <link rel="stylesheet" href="camadas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="utilitarios.css">
+</head>
+
+<body>
+
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho-site">
+        <h1>AgroFeira</h1>
+
+        <nav aria-label="Principal" class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="safra.html">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro do produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <h2>Aula 6 — o registro de decisão</h2>
+        <p><strong>Aluno:</strong> Gustavo Rodrigues Coelho</p>
+        <p><strong>Matrícula:</strong> 2024002980</p>
+
+        <ul>
+            <li>
+                <strong>Repositório:</strong>
+                <a href="https://github.com/gustavo-rcoelho/agrofeira-gustavorcoelho">
+                    https://github.com/gustavo-rcoelho/agrofeira-gustavorcoelho
+                </a>
+            </li>
+            <li>
+                <strong>Site público:</strong>
+                <a href="https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/">
+                    https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/
+                </a>
+            </li>
+            <li>
+                <strong>Catálogo Bootstrap:</strong>
+                <a href="https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/catalogo-bootstrap.html">
+                    https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/catalogo-bootstrap.html
+                </a>
+            </li>
+            <li>
+                <strong>Checkout Bootstrap:</strong>
+                <a href="https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/checkout-bootstrap.html">
+                    https://gustavo-rcoelho.github.io/agrofeira-gustavorcoelho/checkout-bootstrap.html
+                </a>
+            </li>
+        </ul>
+        <section>
+            <h3>1. As correções de acessibilidade</h3>
+
+            <p>
+                Nesta seção são registradas as correções de
+                acessibilidade realizadas durante a Atividade 06.
+            </p>
+
+            <table class="tabela-safra">
+                <caption>Registro das correções de acessibilidade</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Componente</th>
+                        <th scope="col">Problema</th>
+                        <th scope="col">Como se detectou</th>
+                        <th scope="col">Correção</th>
+                        <th scope="col">Onde está no código</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Botão do menu responsivo</th>
+                        <td>
+                            O modelo da documentação exibe um rótulo de acessibilidade em inglês, 
+                            o que diverge do idioma padrão aplicado na página.
+                        </td>
+                        <td>
+                            A verificação dessa nomenclatura foi realizada na aba de Acessibilidade (Accessibility) do 
+                            Chrome DevTools, inspecionando a propriedade Name.
+                        </td>
+                        <td>
+                            Inseriu-se o atributo aria-label="Menu" para garantir que o elemento pudesse ser reconhecido 
+                            e lido em português.
+                        </td>
+                        <td>
+                            A alteração foi feita no documento catalogo-bootstrap.html, diretamente no elemento button 
+                            que possui a classe navbar-toggler.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Botão de fechar o diálogo</th>
+                        <td>
+                            O código de referência traz a marcação aria-label definida como "Close", não acompanhando o 
+                            idioma utilizado na página.
+                        </td>
+                        <td>
+                            A constatação foi feita ao examinar o elemento através da aba Accessibility do Chrome DevTools, 
+                            avaliando o valor contido em Name.
+                        </td>
+                        <td>
+                            Foi atribuído o valor aria-label="Fechar", assegurando que a leitura e a identificação do 
+                            componente ocorram em língua portuguesa.
+                        </td>
+                        <td>
+                            O ajuste foi realizado no documento catalogo-bootstrap.html, mais precisamente no botão de 
+                            classe btn-close que fica na parte superior da janela modal do Açaí médio.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hierarquia de títulos na janela modal</th>
+                        <td>
+                            O modelo fornecido pela documentação emprega a tag &lt;h1&gt; para o cabeçalho do modal, 
+                            o que gera um problema semântico, visto que a página já conta com um título principal de 
+                            mesmo nível.
+                        </td>
+                        <td>
+                            A inconsistência foi notada ao confrontar o código com as diretrizes do Bootstrap e ao 
+                            revisar a estrutura lógica dos cabeçalhos do documento.
+                        </td>
+                        <td>
+                            A tag foi trocada por &lt;h2 class="modal-title h5"&gt;, o que ajusta a ordem semântica 
+                            dos títulos sem causar impacto no visual do elemento.
+                        </td>
+                        <td>
+                            A modificação encontra-se no documento catalogo-bootstrap.html, especificamente no bloco 
+                            modal-header pertencente à janela de detalhes do Açaí médio.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Associação de mensagens de erro</th>
+                        <td>
+                            Os alertas de falha eram visíveis na interface gráfica, mas não possuíam vínculo semântico 
+                            com os seus respectivos campos na árvore de acessibilidade.
+                        </td>
+                        <td>
+                            O apontamento foi feito com base nas orientações da seção 2.10 da apostila, aliado à inspeção 
+                            do input de E-mail através da aba Accessibility do Chrome DevTools.
+                        </td>
+                        <td>
+                            A solução adotada foi incluir o atributo aria-describedby nos três campos obrigatórios, 
+                            conectando-os aos atributos id que foram inseridos nos textos de alerta.
+                        </td>
+                        <td>
+                            As adequações ocorreram no documento checkout-bootstrap.html, atuando diretamente nos campos 
+                            de nome, email e termos, para ligá-los às mensagens que receberam os identificadores nome-erro, 
+                            email-erro e termos-erro.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Identificação semântica do diálogo</th>
+                        <td>
+                            Embora a tag &lt;div&gt; do modal faça uso do atributo aria-labelledby, faltava a definição 
+                            semântica explícita caracterizando o componente como um diálogo no HTML estático.
+                        </td>
+                        <td>
+                            A constatação baseou-se nas orientações presentes no roteiro da Atividade 06, em conjunto 
+                            com a necessidade de prevenir apontamentos de erro na ferramenta de validação de HTML.
+                        </td>
+                        <td>
+                            A solução implementada foi inserir o atributo role="dialog" na estrutura principal 
+                            (elemento contêiner) da janela modal.
+                        </td>
+                        <td>
+                            A modificação foi inserida no documento catalogo-bootstrap.html, incidindo especificamente 
+                            sobre a tag &lt;div class="modal fade" id="detalhe-acai"&gt;.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Pendências de acessibilidade</h4>
+
+            <ol>
+                <li>
+                    <strong>Foco após validação do formulário:</strong> ao submeter o formulário com 
+                    informações incorretas, o foco permanece no botão "Fazer pedido". O comportamento 
+                    ideal exigiria a implementação de um script que movesse o foco automaticamente 
+                    para o primeiro input inválido, agilizando a correção por parte do usuário.
+                </li>
+                <li>
+                    <strong>Janela modal restrita a um único produto:</strong> atualmente, o botão 
+                    “Ver detalhes” funciona exclusivamente para o item do Açaí. Para contemplar os 
+                    demais, faria-se necessário desenvolver uma lógica de programação capaz de atualizar 
+                    o conteúdo do diálogo de maneira dinâmica, dependendo da opção selecionada no catálogo.
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h3>2. O registro de decisão</h3>
+
+            <h4>Contexto</h4>
+
+            <p>
+                O projeto AgroFeira precisa definir qual abordagem de estilização será adotada para
+                a sua futura aplicação em React. Durante as análises de desempenho, constatou-se que 
+                o CSS autoral transferiu apenas 5,5 kB, enquanto o Bootstrap exigiu a transferência 
+                de 35,0 kB de CSS e acrescentou um peso de 25,2 kB de JavaScript. Além do tamanho 
+                maior, notou-se uma forte dependência desses scripts: ao desativar o JavaScript no 
+                navegador, o menu responsivo e a janela de diálogo deixaram de funcionar, além disso, 
+                o formulário de checkout passou a permitir o envio de campos vazios, pois sua validação 
+                também depende de JavaScript.
+                Esses resultados fundamentam a escolha final.
+            </p>
+
+            <h4>Opções consideradas</h4>
+
+            <ol>
+                <li>
+                    <strong>CSS autoral:</strong> garante maior controle sobre a aparência e 
+                    personalização dos elementos da AgroFeira, porém demanda um trabalho 
+                    significativamente maior para desenvolver, organizar e manter os estilos de 
+                    forma manual. Como reflexo disso, na Atividade 05, essa estratégia contabilizou 
+                    530 linhas de CSS, resultando em uma transferência de 5,5 kB.
+                </li>
+
+                <li>
+                    <strong>Bootstrap:</strong> acelera a construção de interfaces responsivas ao 
+                    fornecer componentes e classes pré-configuradas, minimizando a necessidade de 
+                    escrever CSS manualmente. Em contrapartida, insere dependências externas e eleva 
+                    o volume de dados transferidos, o que fica evidente nos números: embora o projeto 
+                    tenha exigido apenas 84 linhas de CSS personalizado na Atividade 05, o framework 
+                    demandou a transferência de 35,0 kB de CSS, somados a um acréscimo de 25,2 kB de 
+                    JavaScript registrado na Atividade 06.
+                </li>
+
+                <li>
+                    <strong>Tailwind:</strong> viabiliza a criação de interfaces flexíveis através da 
+                    aplicação de classes utilitárias diretamente no HTML, o que facilita muito a personalização. 
+                    Em contrapartida, exige que o desenvolvedor organize e combine essas classes manualmente 
+                    para estruturar os elementos, em vez de fornecer componentes visuais já prontos como o 
+                    Bootstrap. Conforme apresentado nos slides da Aula 06, o framework pode ser testado em 
+                    ambiente de desenvolvimento utilizando o Play CDN, porém não chegou a ser implementado ou 
+                    medido nas atividades do projeto AgroFeira.
+                </li>
+            </ol>
+
+            <h4>Decisão</h4>
+
+            <p>
+                Considerando que o CSS autoral exigiria um alto esforço
+                contínuo de desenvolvimento e manutenção, e que o Tailwind
+                demandaria uma curva de aprendizado para a construção manual
+                de componentes através de classes utilitárias, optei por seguir
+                com o Bootstrap completo, utilizando tanto a sua folha de
+                estilos quanto o seu JavaScript, para aproveitar a agilidade
+                dos componentes prontos e a redução drástica na escrita
+                de código personalizado.
+            </p>
+
+            <h4>Consequências aceitas</h4>
+
+            <p>
+                Ao optar pelo Bootstrap completo, assumo o custo do maior volume de dados 
+                transferidos, considerando os 35,0 kB de CSS e os 25,2 kB de JavaScript medidos 
+                nas atividades. Também assumo a dependência do JavaScript do Bootstrap, sabendo 
+                que o menu responsivo e a janela de diálogo deixam de funcionar quando ele está 
+                desativado. Além disso, reconheço o risco de possíveis conflitos futuros com React, 
+                uma vez que o JavaScript do Bootstrap altera diretamente classes e atributos do HTML, 
+                podendo interferir no gerenciamento da interface realizado pela biblioteca React.
+            </p>
+
+            <h4>O que me faria mudar de ideia</h4>
+
+            <p>
+                Eu reconsideraria a utilização do Bootstrap completo caso fossem detectados conflitos 
+                críticos entre a manipulação direta do HTML feita por seu JavaScript e o gerenciamento 
+                de interface do React. Além disso, a decisão seria revista se futuras medições apontarem 
+                que o peso adicional dos arquivos prejudica de forma significativa o tempo de 
+                carregamento da aplicação, ou se a necessidade constante de sobrescrever e adaptar os 
+                estilos originais se tornar tão custosa que anule a principal vantagem de adotar um 
+                framework de componentes prontos.
+            </p>
+            <h4>Fontes</h4>
+
+            <ol>
+                <li>
+                    <strong>Documentação oficial:</strong>
+                    BOOTSTRAP. Get started with Bootstrap.
+                    Versão 5.3.8. Seção: JS components.
+                    Disponível em:
+                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/#js-components">
+                        Documentação oficial do Bootstrap
+                    </a>.
+                </li>
+
+                <li>
+                    <strong>Bibliografia da disciplina:</strong>
+                    GRANT, Keith J. CSS in Depth. Manning Publications, 2018.
+                    Capítulo 2 — Working with Relative Units.
+                    Tema consultado: utilização das unidades relativas em e rem
+                    para dimensionamento de elementos e textos em CSS.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>AgroFeira — produtos da nossa região.</p>
+    </footer>
+
+</body>
+</html>
