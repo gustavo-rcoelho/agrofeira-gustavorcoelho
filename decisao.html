@@ -211,84 +211,41 @@
             <h4>Contexto</h4>
 
             <p>
-                O projeto AgroFeira precisa definir qual abordagem de estilização será adotada para
-                a sua futura aplicação em React. Durante as análises de desempenho, constatou-se que 
-                o CSS autoral transferiu apenas 5,5 kB, enquanto o Bootstrap exigiu a transferência 
-                de 35,0 kB de CSS e acrescentou um peso de 25,2 kB de JavaScript. Além do tamanho 
-                maior, notou-se uma forte dependência desses scripts: ao desativar o JavaScript no 
-                navegador, o menu responsivo e a janela de diálogo deixaram de funcionar, além disso, 
-                o formulário de checkout passou a permitir o envio de campos vazios, pois sua validação 
-                também depende de JavaScript.
-                Esses resultados fundamentam a escolha final.
+                O projeto AgroFeira precisa definir qual abordagem de estilização será adotada para a sua futura aplicação em React. Durante as análises de desempenho, constatou-se que  o CSS autoral transferiu apenas 5,5 kB, enquanto o Bootstrap exigiu a transferência de 35,0 kB de CSS e acrescentou um peso de 25,2 kB de JavaScript. Além do tamanho maior, notou-se uma forte dependência desses scripts: ao desativar o JavaScript no  navegador, o menu responsivo e a janela de diálogo deixaram de funcionar, além disso, o formulário de checkout passou a permitir o envio de campos vazios, pois sua validação também depende de JavaScript. Esses resultados fundamentam a escolha final.
             </p>
 
             <h4>Opções consideradas</h4>
 
             <ol>
                 <li>
-                    <strong>CSS autoral:</strong> garante maior controle sobre a aparência e 
-                    personalização dos elementos da AgroFeira, porém demanda um trabalho 
-                    significativamente maior para desenvolver, organizar e manter os estilos de 
-                    forma manual. Como reflexo disso, na Atividade 05, essa estratégia contabilizou 
-                    530 linhas de CSS, resultando em uma transferência de 5,5 kB.
+                    <strong>CSS autoral:</strong> garante maior controle sobre a aparência e personalização dos elementos da AgroFeira, porém demanda um trabalho significativamente maior para desenvolver, organizar e manter os estilos de forma manual. Como reflexo disso, na Atividade 05, essa estratégia contabilizou 530 linhas de CSS, resultando em uma transferência de 5,5 kB.
                 </li>
 
                 <li>
-                    <strong>Bootstrap:</strong> acelera a construção de interfaces responsivas ao 
-                    fornecer componentes e classes pré-configuradas, minimizando a necessidade de 
-                    escrever CSS manualmente. Em contrapartida, insere dependências externas e eleva 
-                    o volume de dados transferidos, o que fica evidente nos números: embora o projeto 
-                    tenha exigido apenas 84 linhas de CSS personalizado na Atividade 05, o framework 
-                    demandou a transferência de 35,0 kB de CSS, somados a um acréscimo de 25,2 kB de 
-                    JavaScript registrado na Atividade 06.
+                    <strong>Bootstrap:</strong> acelera a construção de interfaces responsivas ao fornecer componentes e classes pré-configuradas, minimizando a necessidade de escrever CSS manualmente. Em contrapartida, insere dependências externas e eleva o volume de dados transferidos, o que fica evidente nos números: embora o projeto tenha exigido apenas 84 linhas de CSS personalizado na Atividade 05, o framework demandou a transferência de 35,0 kB de CSS, somados a um acréscimo de 25,2 kB de JavaScript registrado na Atividade 06.
                 </li>
 
                 <li>
-                    <strong>Tailwind:</strong> viabiliza a criação de interfaces flexíveis através da 
-                    aplicação de classes utilitárias diretamente no HTML, o que facilita muito a personalização. 
-                    Em contrapartida, exige que o desenvolvedor organize e combine essas classes manualmente 
-                    para estruturar os elementos, em vez de fornecer componentes visuais já prontos como o 
-                    Bootstrap. Conforme apresentado nos slides da Aula 06, o framework pode ser testado em 
-                    ambiente de desenvolvimento utilizando o Play CDN, porém não chegou a ser implementado ou 
-                    medido nas atividades do projeto AgroFeira.
+                    <strong>Tailwind:</strong> viabiliza a criação de interfaces flexíveis através da aplicação de classes utilitárias diretamente no HTML, o que facilita muito a personalização. Em contrapartida, exige que o desenvolvedor organize e combine essas classes manualmente para estruturar os elementos, em vez de fornecer componentes visuais já prontos como o Bootstrap. Conforme apresentado nos slides da Aula 06, o framework pode ser testado em ambiente de desenvolvimento utilizando o Play CDN, porém não chegou a ser implementado ou medido nas atividades do projeto AgroFeira.
                 </li>
             </ol>
 
             <h4>Decisão</h4>
 
             <p>
-                Considerando que o CSS autoral exigiria um alto esforço
-                contínuo de desenvolvimento e manutenção, e que o Tailwind
-                demandaria uma curva de aprendizado para a construção manual
-                de componentes através de classes utilitárias, optei por seguir
-                com o Bootstrap completo, utilizando tanto a sua folha de
-                estilos quanto o seu JavaScript, para aproveitar a agilidade
-                dos componentes prontos e a redução drástica na escrita
-                de código personalizado.
+                Considerando que o CSS autoral exigiria um alto esforçocontínuo de desenvolvimento e manutenção, e que o Tailwind demandaria uma curva de aprendizado para a construção manual de componentes através de classes utilitárias, optei por seguir com o Bootstrap completo, utilizando tanto a sua folha deestilos quanto o seu JavaScript, para aproveitar a agilidadedos componentes prontos e a redução drástica na escritade código personalizado.
             </p>
 
             <h4>Consequências aceitas</h4>
 
             <p>
-                Ao optar pelo Bootstrap completo, assumo o custo do maior volume de dados 
-                transferidos, considerando os 35,0 kB de CSS e os 25,2 kB de JavaScript medidos 
-                nas atividades. Também assumo a dependência do JavaScript do Bootstrap, sabendo 
-                que o menu responsivo e a janela de diálogo deixam de funcionar quando ele está 
-                desativado. Além disso, reconheço o risco de possíveis conflitos futuros com React, 
-                uma vez que o JavaScript do Bootstrap altera diretamente classes e atributos do HTML, 
-                podendo interferir no gerenciamento da interface realizado pela biblioteca React.
+                Ao optar pelo Bootstrap completo, assumo o custo do maior volume de dados transferidos, considerando os 35,0 kB de CSS e os 25,2 kB de JavaScript medidos nas atividades. Também assumo a dependência do JavaScript do Bootstrap, sabendo que o menu responsivo e a janela de diálogo deixam de funcionar quando ele está desativado. Além disso, reconheço o risco de possíveis conflitos futuros com React, uma vez que o JavaScript do Bootstrap altera diretamente classes e atributos do HTML, podendo interferir no gerenciamento da interface realizado pela biblioteca React.
             </p>
 
             <h4>O que me faria mudar de ideia</h4>
 
             <p>
-                Eu reconsideraria a utilização do Bootstrap completo caso fossem detectados conflitos 
-                críticos entre a manipulação direta do HTML feita por seu JavaScript e o gerenciamento 
-                de interface do React. Além disso, a decisão seria revista se futuras medições apontarem 
-                que o peso adicional dos arquivos prejudica de forma significativa o tempo de 
-                carregamento da aplicação, ou se a necessidade constante de sobrescrever e adaptar os 
-                estilos originais se tornar tão custosa que anule a principal vantagem de adotar um 
-                framework de componentes prontos.
+                Eu reconsideraria a utilização do Bootstrap completo caso fossem detectados conflitos críticos entre a manipulação direta do HTML feita por seu JavaScript e o gerenciamento de interface do React. Além disso, a decisão seria revista se futuras medições apontarem que o peso adicional dos arquivos prejudica de forma significativa o tempo de carregamento da aplicação, ou se a necessidade constante de sobrescrever e adaptar os estilos originais se tornar tão custosa que anule a principal vantagem de adotar um framework de componentes prontos.
             </p>
             <h4>Fontes</h4>
 
